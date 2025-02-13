@@ -11,7 +11,7 @@
  *
  * Date: 2016-05-20T17:23Z
  */
-
+ 
 (function( global, factory ) {
 
 	if ( typeof module === "object" && typeof module.exports === "object" ) {
