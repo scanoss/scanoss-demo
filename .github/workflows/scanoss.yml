@@ -21,7 +21,7 @@ jobs:
 
       - name: Run SCANOSS Code Scan
         id: scanoss-code-scan-step
-        uses: scanoss/gha-code-scan@downgrade-artifacts-dependencies
+        uses: scanoss/gha-code-scan@chore/downgrade-artifacts-dependencies
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
