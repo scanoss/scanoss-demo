@@ -9,7 +9,6 @@ permissions:
   pull-requests: write
   checks: write
   actions: read
-  secrets: read
 
 jobs:
    scanoss-code-scan:
@@ -26,7 +25,7 @@ jobs:
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
-          api.url: https://api.scanoss.com
+          api.url: https://api.scanoss.com/scan/direct
           api.key: ${{ secrets.SCANOSS_KEY }}
 
 
