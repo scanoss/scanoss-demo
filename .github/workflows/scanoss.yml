@@ -12,7 +12,7 @@ permissions:
 
 jobs:
    scanoss-code-scan:
-    name: SCANOSS Code Scan
+    name: SCANOSS Code Scan 
     runs-on: ubuntu-latest
 
     steps:
