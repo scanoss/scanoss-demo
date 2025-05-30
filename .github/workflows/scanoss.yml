@@ -21,7 +21,7 @@ jobs:
 
       - name: Run SCANOSS Code Scan
         id: scanoss-code-scan-step
-        uses: scanoss/code-scan-action@downgrade-artifacts-dependencies
+        uses: scanoss/code-scan-action@main
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
