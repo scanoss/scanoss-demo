@@ -1,11 +1,7 @@
-name: SCANOSS
+name: Perform SCANOSS Code Scan
 
 on:
   pull_request:
-  push:
-    branches:
-      - '*'
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -15,7 +11,7 @@ permissions:
 
 jobs:
    scanoss-code-scan:
-    name: SCANOSS Code Scan
+    name: SCANOSS Code Scan 
     runs-on: ubuntu-latest
 
     steps:
@@ -24,12 +20,12 @@ jobs:
 
       - name: Run SCANOSS Code Scan
         id: scanoss-code-scan-step
-        uses: scanoss/code-scan-action@v0
+        uses: scanoss/gha-code-scan@chore/downgrade-artifacts-dependencies
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
-          #api.url: https://api.scanoss.com/scan/direct
-          #api.key: ${{ secrets.SCANOSS_KEY }}
+          api.url: https://api.scanoss.com/scan/direct
+          api.key: ${{ secrets.SCANOSS_KEY }}
 
 
       - name: Print stdout scan command
@@ -37,5 +33,3 @@ jobs:
 
       - name: Print Results
         run: cat "${{ steps.scanoss-code-scan-step.outputs.result-filepath }}"
-  
-  
