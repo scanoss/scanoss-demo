@@ -9,6 +9,7 @@ permissions:
   pull-requests: write
   checks: write
   actions: read
+  secrets: read
 
 jobs:
    scanoss-code-scan:
