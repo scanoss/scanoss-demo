@@ -21,7 +21,7 @@ jobs:
 
       - name: Run SCANOSS Code Scan
         id: scanoss-code-scan-step
-        uses: scanoss/code-scan-action@main
+        uses: scanoss/gha-code-scan@main
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
